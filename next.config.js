@@ -3,7 +3,7 @@ require('dotenv').config();
 const webpack = require('webpack');
 
 const isProduction = process.env.NODE_ENV === 'production';
-const prefix = isProduction ? '/bumperballs' : '';
+const prefix = isProduction ? '/westerling-and-maclean' : '';
 
 const envVariables = {
   AIRTABLE_APP: process.env.AIRTABLE_APP,
