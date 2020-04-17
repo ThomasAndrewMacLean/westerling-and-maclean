@@ -18,8 +18,9 @@ export const CtaButton = styled.button`
     content: '';
     position: absolute;
     display: block;
-    width: 102%;
-    height: 7px;
+    width: 107%;
+    height: 25%;
+    left: -10px;
     bottom: 0;
     background: var(--colour-focus);
     transition: height 300ms ease;
