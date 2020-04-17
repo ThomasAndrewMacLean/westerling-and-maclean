@@ -90,6 +90,7 @@ const Hero = styled.div`
   img {
     position: absolute;
     top: 0;
+    right: 1%;
     height: 100vh;
     transform: rotateY(180deg);
   }
