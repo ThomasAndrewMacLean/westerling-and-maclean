@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import Head from 'next/head';
 import styled from 'styled-components';
 
@@ -13,10 +13,24 @@ import Contact from '../components/Contact';
 const IndexPage = () => {
   const pics = useContext(PictureContext);
 
+  useEffect(() => {
+    const setResizeVariables = () => {
+      // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+      let vh = window.innerHeight * 0.01;
+      // Then we set the value in the --vh custom property to the root of the document
+      document.documentElement.style.setProperty('--vh', `${vh}px`);
+    };
+    window.addEventListener('resize', setResizeVariables);
+    setResizeVariables();
+    return () => {
+      window.removeEventListener('resize', setResizeVariables);
+    };
+  }, []);
+
   return (
     <Main>
       <Head>
-        <title>Westerling & MacLean</title>
+        <title>Westerling &amp; MacLean</title>
         <meta name="theme-color" content="#f8e3c8"></meta>
 
         <meta
@@ -41,11 +55,9 @@ const IndexPage = () => {
       <div className="snap not-full-height">
         <Quote quoteId="quote1"></Quote>
       </div>
-
-      <Contact
-        imageLeft
-        pic={getImageUrl(pics, 'contact-image', true)}
-      ></Contact>
+      <div className="snap not-full-height">
+        <Contact pic={getImageUrl(pics, 'contact-image', true)}></Contact>
+      </div>
 
       <div className="snap not-full-height">
         <Footer></Footer>
@@ -59,6 +71,7 @@ const Main = styled.main`
   width: 100vw;
   overflow-x: hidden;
   height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   background: var(--colour-white);
   padding: 0 1rem;
   .hero {

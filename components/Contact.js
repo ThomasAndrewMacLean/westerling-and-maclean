@@ -2,10 +2,10 @@ import React from 'react';
 import T from '../components/Translation';
 import styled from 'styled-components';
 import { CtaButton } from '../styles/button';
-const Contact = ({ pic, imageLeft, white }) => {
+const Contact = ({ pic }) => {
   // Id has to be contact for scroll to after click on button
   return (
-    <Section imageLeft={imageLeft}>
+    <Section>
       <ContactWrap id="contact">
         <T id="contactTitle"></T>
         <ContactForm>
@@ -42,7 +42,7 @@ const Contact = ({ pic, imageLeft, white }) => {
         </ContactForm>
       </ContactWrap>
 
-      <img src={pic} alt="background image with plants" />
+      <img lazy="true" src={pic} alt="background image with plants" />
     </Section>
   );
 };
@@ -50,14 +50,14 @@ const Contact = ({ pic, imageLeft, white }) => {
 const Section = styled.div`
   display: flex;
   align-items: center;
-  flex-direction: ${(props) => (props.imageLeft ? 'row' : 'row-reverse')};
+  flex-direction: row;
   background: var(--gradient-bottom-top);
 
   img {
     width: 50%;
   }
   @media (max-width: 850px) {
-    flex-direction: ${(props) => (props.imageLeft ? 'column' : 'column')};
+    flex-direction: column;
     img {
       width: 100%;
     }
