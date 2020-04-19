@@ -1,18 +1,45 @@
-import React from 'react';
+import React, { useState } from 'react';
 import T from '../components/Translation';
 import styled from 'styled-components';
 import { CtaButton } from '../styles/button';
 import PropTypes from 'prop-types';
+import { formUrl } from '../constants';
 
-const Contact = ({ pic }) => {
+const Contact = ({ pic, headPic }) => {
+  const [sent, setSent] = useState(false);
   const postForm = (e) => {
     e.preventDefault();
+
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+
+    fetch(formUrl, {
+      method: 'POST',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ email, message }),
+    });
+
+    e.target.reset();
+    setSent(true);
   };
   return (
     <Section>
       <ContactWrap>
-        <T id="contactTitle"></T>
-        <ContactForm onSubmit={postForm}>
+        {sent ? (
+          <ContactSent>
+            <T id="contactBedankt"></T>
+            <img src={headPic} alt="head image"></img>
+            <CtaButton onClick={() => setSent(false)}>
+              <T id="contactNieuw"></T>
+            </CtaButton>
+          </ContactSent>
+        ) : (
+          <T id="contactTitle"></T>
+        )}
+        <ContactForm sent={sent} onSubmit={postForm}>
           <div className="wrap">
             <label htmlFor="email">
               <T id="contactEmail"></T>
@@ -69,6 +96,7 @@ const Section = styled.div`
 `;
 
 const ContactWrap = styled.div`
+  position: relative;
   padding: 3rem;
   width: 100%;
 
@@ -102,6 +130,7 @@ const ContactWrap = styled.div`
 `;
 
 const ContactForm = styled.form`
+  opacity: ${(props) => props.sent && 0};
   .submit-wrap {
     padding-top: 1rem;
   }
@@ -126,6 +155,11 @@ const ContactForm = styled.form`
         box-shadow: 0px 2px 10px 0px var(--colour-black-light);
       }
     }
+
+    &:focus {
+      background: var(--colour-focus);
+      box-shadow: 0px 2px 10px 0px var(--colour-black-light);
+    }
     &:active {
       background: var(--colour-focus);
       box-shadow: 0px 2px 10px 0px var(--colour-black-light);
@@ -136,7 +170,23 @@ const ContactForm = styled.form`
   } */
 `;
 
+const ContactSent = styled.div`
+  padding: 3rem;
+  @media (max-width: 500px) {
+    padding: 3rem 1rem;
+  }
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  bottom: 0;
+  /* background: pink; */
+`;
+
 Contact.propTypes = {
   pic: PropTypes.string.isRequired,
+  headPic: PropTypes.string.isRequired,
 };
+
 export default Contact;

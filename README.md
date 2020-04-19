@@ -12,5 +12,6 @@ https://theysaidso.com/quotes/author/steve-jobs/
 https://medium.com/the-non-traditional-developer/how-to-use-an-intersectionobserver-in-a-react-hook-9fb061ac6cb5
 
 https://cssgradient.io/
+https://grid.layoutit.com/
 https://www.npmjs.com/package/next-pwa
 https://favicon.io/favicon-generator/

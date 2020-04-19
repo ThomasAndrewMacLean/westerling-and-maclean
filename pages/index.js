@@ -49,7 +49,10 @@ const IndexPage = () => {
         <Quote quoteId="quote1"></Quote>
       </div>
       <div id="contact" className="snap">
-        <Contact pic={getImageUrl(pics, 'contact-image', true)}></Contact>
+        <Contact
+          headPic={getImageUrl(pics, 'hoofd', true)}
+          pic={getImageUrl(pics, 'contact-image', true)}
+        ></Contact>
       </div>
 
       <div className="snap not-full-height">
