@@ -25,7 +25,7 @@ const Plant = ({ pic, text, imageLeft, white }) => {
           <T id={text}></T>
 
           <CtaButton>
-            <T id="test"></T>
+            <T id="contactUs"></T>
           </CtaButton>
         </Left>
       </Section>
@@ -36,9 +36,8 @@ const Plant = ({ pic, text, imageLeft, white }) => {
 const Section = styled.div`
   display: flex;
   flex-direction: ${(props) => (props.imageLeft ? 'row' : 'row-reverse')};
-  /* min-height: 100vh; */
-  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>☘️</text></svg>"),
-    auto;
+  /* cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>☘️</text></svg>"),
+    auto; */
 
   @media (max-width: 850px) {
     flex-direction: ${(props) =>
@@ -67,6 +66,10 @@ const Left = styled.div`
   transform: translateX(${(props) => ` ${-15 * (4 * props.ratio - 4)}px`});
   transition: transform 250ms ease;
 
+  ${CtaButton} {
+    margin: 2rem auto;
+    display: flex;
+  }
   @media (max-width: 850px) {
     background: ${(props) =>
       props.white ? `var(--colour-white)` : 'var(--background-light)'};

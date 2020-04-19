@@ -32,6 +32,17 @@ export const CtaButton = styled.button`
     transition: height 300ms ease;
   }
 
+  &::before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    left: -1rem;
+    padding: 1rem;
+    top: -1rem;
+  }
+
   &:hover::after {
     height: 100%;
   }

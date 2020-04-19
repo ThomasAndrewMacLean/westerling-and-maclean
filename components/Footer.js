@@ -16,6 +16,7 @@ const Footer = () => {
 const FooterSection = styled.footer`
   background: var(--colour-black-light);
   color: var(--background-light);
+  padding: 3rem 1rem;
 `;
 
 export default Footer;
