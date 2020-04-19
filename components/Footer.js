@@ -21,11 +21,6 @@ const Footer = ({ pics, insta }) => {
         <ul>
           <li>
             <a href="#">
-              {/* <img
-                className="logo"
-                src={getImageUrl(pics, 'facebook', true)}
-                alt="facebook logo"
-              /> */}
               <Logo
                 className="logo"
                 pic={getImageUrl(pics, 'facebook', true)}
@@ -34,12 +29,6 @@ const Footer = ({ pics, insta }) => {
           </li>
           <li>
             <a href="#">
-              {/* <img
-                className="logo"
-                src={getImageUrl(pics, 'linkedin', true)}
-                alt="linkedin logo"
-              /> */}
-
               <Logo
                 className="logo"
                 pic={getImageUrl(pics, 'linkedin', true)}
@@ -48,11 +37,6 @@ const Footer = ({ pics, insta }) => {
           </li>
           <li>
             <a href="#">
-              {/* <img
-                className="logo"
-                src={getImageUrl(pics, 'instagram', true)}
-                alt="instagram logo"
-              /> */}
               <Logo
                 className="logo"
                 pic={getImageUrl(pics, 'instagram', true)}

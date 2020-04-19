@@ -1,13 +1,13 @@
 import React from 'react';
-import T from '../components/Translation';
+import T from './Translation';
 import styled from 'styled-components';
 import { CtaButton } from '../styles/button';
 import { scrollToContactForm } from '../utils';
 
-const Plant = ({ pic, text, imageLeft, white }) => {
+const Info = ({ pic, text, imageLeft, white }) => {
   return (
     <Section white={white} imageLeft={imageLeft}>
-      {pic && <Image white={white} src={pic}></Image>}
+      {pic && <Image loading="lazy" white={white} src={pic}></Image>}
       {text && (
         <Left white={white}>
           <T id={text}></T>
@@ -70,4 +70,4 @@ const Left = styled.div`
   }
 `;
 
-export default Plant;
+export default Info;

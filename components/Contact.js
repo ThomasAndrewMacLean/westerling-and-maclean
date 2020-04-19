@@ -42,7 +42,7 @@ const Contact = ({ pic }) => {
         </ContactForm>
       </ContactWrap>
 
-      <img lazy="true" src={pic} alt="background image with plants" />
+      <img loading="lazy" src={pic} alt="background image with plants" />
     </Section>
   );
 };

@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 import { PictureContext } from '../pages/_app';
 import { getImageUrl } from '../utils';
-import Plant from '../components/Plant';
+import Info from '../components/Info';
 import Quote from '../components/Quote';
 import Hero from '../components/Hero';
 import Footer from '../components/Footer';
@@ -44,12 +44,12 @@ const IndexPage = () => {
         </Section>
       </div>
       <div className="snap plant">
-        <Plant
+        <Info
           white
           imageLeft
           text="lorem"
-          pic={getImageUrl(pics, 'wireframe')}
-        ></Plant>
+          pic={getImageUrl(pics, 'info-image', true)}
+        ></Info>
       </div>
 
       <div className="snap not-full-height">
