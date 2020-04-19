@@ -13,9 +13,11 @@ const Info = ({ pic, text }) => {
         <Left>
           <T id={text}></T>
 
-          <CtaButton onClick={scrollToContactForm}>
-            <T id="contactUs"></T>
-          </CtaButton>
+          <div className="big">
+            <CtaButton onClick={scrollToContactForm}>
+              <T id="contactUs"></T>
+            </CtaButton>
+          </div>
         </Left>
       )}
     </Section>
@@ -27,6 +29,10 @@ export const Section = styled.div`
   flex-direction: row;
 
   background: white;
+
+  .big {
+    font-size: 2rem;
+  }
 
   @media (max-width: 850px) {
     flex-direction: column-reverse;
