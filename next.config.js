@@ -21,6 +21,7 @@ module.exports = withPWA({
   },
   pwa: {
     skipWaiting: true,
+    //  swDest: 'public/sw.js',
     // exclude: [/static/],
   },
   assetPrefix: prefix,
