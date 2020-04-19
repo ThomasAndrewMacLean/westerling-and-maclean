@@ -17,6 +17,8 @@ const IndexPage = () => {
     <Main>
       <Head>
         <title>Westerling & MacLean</title>
+        <meta name="theme-color" content="#f8e3c8"></meta>
+
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"

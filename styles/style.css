@@ -59,6 +59,7 @@ body {
   color: var(--colour-black-light);
   font-weight: 300;
   /* height: 100vh; */
+  -webkit-overflow-scrolling: touch;
   width: 100%;
   font-size: 18px;
 
