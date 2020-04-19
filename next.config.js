@@ -19,9 +19,9 @@ module.exports = withPWA({
   publicRuntimeConfig: {
     SENTRY: process.env.SENTRY,
   },
-  // pwa: {
-  //   dest: 'public',
-  // },
+  pwa: {
+    skipWaiting: true,
+  },
   assetPrefix: prefix,
   exportTrailingSlash: true,
   exportPathMap: function () {
