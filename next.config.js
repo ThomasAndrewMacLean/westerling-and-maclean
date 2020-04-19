@@ -21,6 +21,7 @@ module.exports = withPWA({
   },
   pwa: {
     skipWaiting: true,
+    exclude: [/static/],
   },
   assetPrefix: prefix,
   exportTrailingSlash: true,
