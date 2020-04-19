@@ -9,7 +9,9 @@ const Footer = ({ pics }) => {
     <FooterSection>
       <div className="copy">
         Made with ❤️ {new Date().getFullYear()} ©
-        Westerling&nbsp;&amp;&nbsp;MacLean
+        <a href="https://westerling-maclean.be">
+          Westerling&nbsp;&amp;&nbsp;MacLean
+        </a>
       </div>
       <div className="Annouk">
         <T id="footerAnnouk"></T>
@@ -115,6 +117,7 @@ const FooterSection = styled.footer`
       display: flex;
       align-items: baseline;
     }
+
     @media (max-width: 500px) {
       ul {
         display: flex;
