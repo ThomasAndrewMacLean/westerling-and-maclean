@@ -20,6 +20,7 @@ module.exports = withPWA({
   },
   pwa: {
     dest: 'public',
+    modifyURLPrefix: '/westerling-and-maclean',
   },
   assetPrefix: prefix,
   exportTrailingSlash: true,
