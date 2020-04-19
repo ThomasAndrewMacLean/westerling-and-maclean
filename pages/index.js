@@ -21,7 +21,7 @@ const IndexPage = () => {
           content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
         />
       </Head>
-      <div className="snap">
+      <div className="snap hero">
         <Section white>
           <Hero></Hero>
         </Section>
@@ -39,10 +39,16 @@ const IndexPage = () => {
         <Quote quoteId="quote1"></Quote>
       </div>
       <div className="snap plant">
-        <Plant text="lorem" pic={getImageUrl(pics, 'hero')}></Plant>
+        <Plant text="lorem"></Plant>
       </div>
+
+      {/* <div className="snap plant">
+        <Plant pic={getImageUrl(pics, 'code')}></Plant>
+      </div> */}
       <div className="snap not-full-height">
-        <Footer bgColor="dark">hello</Footer>
+        <Footer pic={getImageUrl(pics, 'code')} bgColor="dark">
+          hello
+        </Footer>
       </div>
     </Main>
   );
@@ -55,7 +61,9 @@ const Main = styled.main`
   height: 100vh;
   background: var(--colour-white);
   padding: 0 1rem;
-
+  .hero {
+    min-height: 70vh;
+  }
   @media (max-width: 500px) {
     padding: 0;
   }

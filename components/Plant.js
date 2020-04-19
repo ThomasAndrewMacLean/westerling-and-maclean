@@ -19,15 +19,17 @@ const Plant = ({ pic, text, imageLeft, white }) => {
   return (
     <>
       <Section imageLeft={imageLeft}>
-        <Image white={white} pic={pic}></Image>
-        <Left white={white}>
-          {/* <Left ref={ref} ratio={hasBeenLoaded ? 1 : entry.intersectionRatio}> */}
-          <T id={text}></T>
+        {pic && <Image white={white} pic={pic}></Image>}
+        {text && (
+          <Left white={white}>
+            {/* <Left ref={ref} ratio={hasBeenLoaded ? 1 : entry.intersectionRatio}> */}
+            <T id={text}></T>
 
-          <CtaButton>
-            <T id="contactUs"></T>
-          </CtaButton>
-        </Left>
+            <CtaButton>
+              <T id="contactUs"></T>
+            </CtaButton>
+          </Left>
+        )}
       </Section>
     </>
   );
@@ -47,10 +49,12 @@ const Section = styled.div`
 
 const Image = styled.div`
   width: 100%;
+  min-height: 450px;
   background: ${(props) => `url(${props.pic})`} no-repeat center center;
   background-size: cover;
-  background-color: var(--colour-black);
-  background-blend-mode: ${(props) => props.white && 'luminosity'};
+  /* background-color: var(--colour-black);
+  background-blend-mode: ${(props) => props.white && 'luminosity'}; */
+  filter: ${(props) => props.white && 'grayscale(0.5)'};
 
   @media (max-width: 850px) {
     height: 450px;
@@ -72,7 +76,7 @@ const Left = styled.div`
   }
   @media (max-width: 850px) {
     background: ${(props) =>
-      props.white ? `var(--colour-white)` : 'var(--background-light)'};
+      props.white ? `var(--colour-white)` : 'var(--colour-white)'};
   }
 
   @media (max-width: 500px) {
