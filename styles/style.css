@@ -4,6 +4,7 @@
   --colour-focus: #61dbc9;
   --colour-white: #fff;
   --colour-black: #222;
+  --colour-black-light: #333;
   --background-light: #f8e3c8;
   --background-light-opacity: #f8e3c8dd;
 
@@ -21,6 +22,7 @@ h1,
 h2,
 h3 {
   font-family: 'Playfair Display', serif;
+  margin-bottom: 1.5rem;
 }
 
 button {

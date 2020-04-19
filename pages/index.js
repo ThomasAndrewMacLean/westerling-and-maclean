@@ -7,6 +7,7 @@ import { PictureContext } from '../pages/_app';
 import { getImageUrl } from '../utils';
 import Plant from '../components/Plant';
 import { CtaButton } from '../styles/button';
+import Quote from '../components/Quote';
 
 const IndexPage = () => {
   const pics = useContext(PictureContext);
@@ -23,9 +24,8 @@ const IndexPage = () => {
       <div className="snap">
         <Section white>
           <Hero>
-            <h1>
-              <T id="title"></T>
-            </h1>
+            <T id="title"></T>
+
             <CtaButton>
               <T id="cta"></T>
             </CtaButton>
@@ -33,16 +33,11 @@ const IndexPage = () => {
           </Hero>
         </Section>
       </div>
-      <div className="snap">
+      <div className="snap plant">
         <Plant pic={getImageUrl(pics, 'hero')}></Plant>
       </div>
       <div className="snap">
-        <Section>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia,
-          facilis adipisci animi minima sit placeat nisi id quaerat! Dolores
-          reprehenderit iste debitis! Officia, consectetur accusantium! Soluta
-          ipsa nobis non optio.
-        </Section>
+        <Quote quoteId="quote1"></Quote>
       </div>
     </Main>
   );
@@ -66,6 +61,10 @@ const Main = styled.main`
       margin-bottom: 15px;
     }
   }
+
+  .snap.plant {
+    scroll-padding-top: 15px;
+  }
 `;
 
 const Section = styled.div`
@@ -80,6 +79,7 @@ const Hero = styled.div`
   h1 {
     font-size: 9vw;
     padding: 3rem;
+    margin-bottom: 0;
     text-shadow: 0 0 10px var(--background-light);
   }
   ${CtaButton} {
@@ -89,7 +89,8 @@ const Hero = styled.div`
 
   img {
     position: absolute;
-    top: 0;
+    top: -50px;
+
     right: 1%;
     height: 100vh;
     transform: rotateY(180deg);

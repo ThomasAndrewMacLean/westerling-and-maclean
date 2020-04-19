@@ -12,6 +12,8 @@ export const CtaButton = styled.button`
   position: relative;
   p {
     position: relative;
+    line-height: inherit !important;
+
     z-index: 1;
   }
   &::after {
