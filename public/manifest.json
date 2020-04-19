@@ -3,17 +3,17 @@
   "short_name": "W&M",
   "icons": [
     {
-      "src": "/android-chrome-192x192.png",
+      "src": "westerling-and-maclean/android-chrome-192x192.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "/android-chrome-512x512.png",
+      "src": "westerling-and-maclean/android-chrome-512x512.png",
       "sizes": "512x512",
       "type": "image/png"
     }
   ],
-  "start_url": "/",
+  "start_url": "westerling-and-maclean/",
   "theme_color": "#f8e3c8",
   "background_color": "#333",
   "display": "standalone"

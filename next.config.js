@@ -19,7 +19,7 @@ module.exports = withPWA({
     SENTRY: process.env.SENTRY,
   },
   pwa: {
-    dest: 'westerling-and-maclean',
+    sw: 'westerling-and-maclean/sw.js',
   },
   assetPrefix: prefix,
   exportTrailingSlash: true,
