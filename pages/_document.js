@@ -1,5 +1,6 @@
 import React from 'react';
 import Document, { Head, Main, NextScript } from 'next/document';
+import { prefix } from '../next.config';
 // Import styled components ServerStyleSheet
 import { ServerStyleSheet } from 'styled-components';
 
@@ -24,7 +25,7 @@ export default class MyDocument extends Document {
     return (
       <html>
         <Head>
-          <link rel="manifest" href="/manifest.json" />
+          <link rel="manifest" href={`${prefix}/manifest.json`} />
 
           <meta name="application-name" content="Westerling &amp; MacLean" />
           <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -54,26 +55,26 @@ export default class MyDocument extends Document {
           <link
             rel="apple-touch-icon"
             sizes="180x180"
-            href="/apple-touch-icon.png"
+            href={`${prefix}/apple-touch-icon.png`}
           />
           <link
             rel="icon"
             type="image/png"
             sizes="32x32"
-            href="/favicon-32x32.png"
+            href={`${prefix}/favicon-32x32.png`} 
           />
           <link
             rel="icon"
             type="image/png"
             sizes="16x16"
-            href="/favicon-16x16.png"
+            href={`${prefix}/favicon-16x16.png`} 
           />
           {/* <link
             rel="mask-icon"
             href="/safari-pinned-tab.svg"
             color="#5bbad5"
           /> */}
-          <link rel="shortcut icon" href="/favicon.ico" />
+          <link rel="shortcut icon" href={`${prefix}/favicon.ico`}  />
           {/* <link
             rel="stylesheet"
             href="https://fonts.googleapis.com/css?family=Roboto:300,400,500"
