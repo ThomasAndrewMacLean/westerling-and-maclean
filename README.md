@@ -15,3 +15,5 @@ https://cssgradient.io/
 https://grid.layoutit.com/
 https://www.npmjs.com/package/next-pwa
 https://favicon.io/favicon-generator/
+
+https://blog.cloudflare.com/secure-and-fast-github-pages-with-cloudflare/

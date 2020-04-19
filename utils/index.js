@@ -17,4 +17,7 @@ export const scrollToContactForm = () => {
 };
 
 const isProduction = process.env.NODE_ENV === 'production';
-export const prefix = isProduction ? '/westerling-and-maclean' : '';
+export const prefix = isProduction ? '' : '';
+
+// Prefix is needed when we host the site on github pages
+// export const prefix = isProduction ? '/westerling-and-maclean' : '';
