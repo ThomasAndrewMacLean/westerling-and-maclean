@@ -8,6 +8,7 @@ import Plant from '../components/Plant';
 import Quote from '../components/Quote';
 import Hero from '../components/Hero';
 import Footer from '../components/Footer';
+import Contact from '../components/Contact';
 
 const IndexPage = () => {
   const pics = useContext(PictureContext);
@@ -23,7 +24,7 @@ const IndexPage = () => {
       </Head>
       <div className="snap hero">
         <Section white>
-          <Hero></Hero>
+          <Hero pic={getImageUrl(pics, 'hero-image', true)}></Hero>
         </Section>
       </div>
       <div className="snap plant">
@@ -38,17 +39,14 @@ const IndexPage = () => {
       <div className="snap not-full-height">
         <Quote quoteId="quote1"></Quote>
       </div>
-      <div className="snap plant">
-        <Plant text="lorem"></Plant>
-      </div>
 
-      {/* <div className="snap plant">
-        <Plant pic={getImageUrl(pics, 'code')}></Plant>
-      </div> */}
+      <Contact
+        imageLeft
+        pic={getImageUrl(pics, 'contact-image', true)}
+      ></Contact>
+
       <div className="snap not-full-height">
-        <Footer pic={getImageUrl(pics, 'code')} bgColor="dark">
-          hello
-        </Footer>
+        <Footer></Footer>
       </div>
     </Main>
   );

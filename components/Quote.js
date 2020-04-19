@@ -37,7 +37,7 @@ const QuoteSection = styled.div`
     /* font-family: 'Playfair Display', serif; */
   }
 
-  @media (max-width: 750px) {
+  @media (max-width: 1000px) {
     blockquote {
       line-height: 1.3rem;
       font-size: 1rem;

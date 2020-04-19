@@ -46,4 +46,14 @@ export const CtaButton = styled.button`
   &:hover::after {
     height: 100%;
   }
+  &:focus::after {
+    height: 100%;
+  }
+  &:active::after {
+    height: 100%;
+  }
+
+  &:active {
+    color: #00000040;
+  }
 `;

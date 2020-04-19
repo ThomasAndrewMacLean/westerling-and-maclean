@@ -2,16 +2,17 @@ import React from 'react';
 import T from '../components/Translation';
 import styled from 'styled-components';
 import { CtaButton } from '../styles/button';
+import { scrollToContactForm } from '../utils';
 
-const Hero = () => {
+const Hero = ({ pic }) => {
   return (
     <HeroSection>
       <T id="title"></T>
 
-      <CtaButton>
+      <CtaButton onClick={scrollToContactForm}>
         <T id="cta"></T>
       </CtaButton>
-      <img src="lady-red.png" />
+      <img src={pic} />
     </HeroSection>
   );
 };
