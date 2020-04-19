@@ -42,7 +42,7 @@ const IndexPage = () => {
       </div>
 
       <div className="snap">
-        <Info text="lorem" pic={getImageUrl(pics, 'info-image', true)}></Info>
+        <Info text="info" pic={getImageUrl(pics, 'info-image', true)}></Info>
       </div>
 
       <div className="snap not-full-height">
