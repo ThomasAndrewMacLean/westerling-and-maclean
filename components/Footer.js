@@ -20,7 +20,7 @@ const Footer = ({ pics }) => {
       <div className="socialmedia">
         <ul>
           <li>
-            <a href="#">
+            <a href="#facebook">
               <Logo
                 className="logo"
                 pic={getImageUrl(pics, 'facebook', true)}
@@ -28,7 +28,7 @@ const Footer = ({ pics }) => {
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="#linkedin">
               <Logo
                 className="logo"
                 pic={getImageUrl(pics, 'linkedin', true)}
@@ -36,7 +36,7 @@ const Footer = ({ pics }) => {
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="#instagram">
               <Logo
                 className="logo"
                 pic={getImageUrl(pics, 'instagram', true)}
