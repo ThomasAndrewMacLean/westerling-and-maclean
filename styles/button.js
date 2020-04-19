@@ -39,12 +39,12 @@ export const CtaButton = styled.button`
     top: -1rem;
   }
 
-  &:hover::after {
-    height: 100%;
+  @media (hover: hover) {
+    &:hover::after {
+      height: 100%;
+    }
   }
-  &:focus::after {
-    height: 100%;
-  }
+
   &:active::after {
     height: 100%;
   }

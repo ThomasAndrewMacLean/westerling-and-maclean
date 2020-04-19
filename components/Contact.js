@@ -120,11 +120,13 @@ const ContactForm = styled.form`
       display: none;
     }
 
-    &:hover {
-      background: var(--colour-focus);
-      box-shadow: 0px 2px 10px 0px var(--colour-black-light);
+    @media (hover: hover) {
+      &:hover {
+        background: var(--colour-focus);
+        box-shadow: 0px 2px 10px 0px var(--colour-black-light);
+      }
     }
-    &:focus {
+    &:active {
       background: var(--colour-focus);
       box-shadow: 0px 2px 10px 0px var(--colour-black-light);
     }
