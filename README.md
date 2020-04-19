@@ -17,3 +17,4 @@ https://www.npmjs.com/package/next-pwa
 https://favicon.io/favicon-generator/
 
 https://blog.cloudflare.com/secure-and-fast-github-pages-with-cloudflare/
+https://developers.caffeina.com/how-to-get-a-100-lighthouse-score-with-nextjs-c2fa4d35a90b

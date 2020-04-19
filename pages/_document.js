@@ -100,6 +100,15 @@ export default class MyDocument extends Document {
           /> */}
           {/* Step 5: Output the styles in the head  */}
           {this.props.styleTags}
+
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `  window.addEventListener('beforeinstallprompt', function(e) {
+                e.preventDefault()
+                return false;
+            });`,
+            }}
+          ></script>
         </Head>
         <body>
           <Main />
