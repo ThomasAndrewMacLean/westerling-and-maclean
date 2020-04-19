@@ -46,11 +46,7 @@ const IndexPage = () => {
       </div>
 
       <div className="snap">
-        <Info
-      
-          text="lorem"
-          pic={getImageUrl(pics, 'info-image', true)}
-        ></Info>
+        <Info text="lorem" pic={getImageUrl(pics, 'info-image', true)}></Info>
       </div>
 
       <div className="snap not-full-height">
@@ -69,6 +65,7 @@ const IndexPage = () => {
 
 const Main = styled.main`
   overflow: scroll;
+  -webkit-overflow-scrolling: touch;
   width: 100vw;
   overflow-x: hidden;
   height: 100vh;
