@@ -60,7 +60,7 @@ const IndexPage = () => {
       </div>
 
       <div className="snap not-full-height">
-        <Footer></Footer>
+        <Footer pics={pics}></Footer>
       </div>
     </Main>
   );
