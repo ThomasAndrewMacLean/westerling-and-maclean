@@ -57,6 +57,7 @@ const Logo = styled.span`
   width: 30px;
   height: 30px;
   display: flex;
+  padding-bottom: 1rem;
 
   &:hover {
     background-blend-mode: inherit;
