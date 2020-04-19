@@ -3,6 +3,7 @@ import T from '../components/Translation';
 import styled from 'styled-components';
 import { CtaButton } from '../styles/button';
 import { scrollToContactForm } from '../utils';
+import PropTypes from 'prop-types';
 
 const Hero = ({ pic }) => {
   return (
@@ -66,5 +67,7 @@ const HeroSection = styled.div`
     }
   }
 `;
-
+Hero.propTypes = {
+  pic: PropTypes.string.isRequired,
+};
 export default Hero;

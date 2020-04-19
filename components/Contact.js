@@ -2,12 +2,17 @@ import React from 'react';
 import T from '../components/Translation';
 import styled from 'styled-components';
 import { CtaButton } from '../styles/button';
+import PropTypes from 'prop-types';
+
 const Contact = ({ pic }) => {
+  const postForm = (e) => {
+    e.preventDefault();
+  };
   return (
     <Section>
       <ContactWrap>
         <T id="contactTitle"></T>
-        <ContactForm>
+        <ContactForm onSubmit={postForm}>
           <div className="wrap">
             <label htmlFor="email">
               <T id="contactEmail"></T>
@@ -100,8 +105,36 @@ const ContactForm = styled.form`
   .submit-wrap {
     padding-top: 1rem;
   }
+
+  ${CtaButton} {
+    padding: 0.8rem 1rem;
+    border-radius: 5px;
+    box-shadow: 0px 2px 10px 0px #00000011;
+    background: white;
+    width: 100%;
+    transition: all 300ms ease;
+    &::after {
+      display: none;
+    }
+    &::before {
+      display: none;
+    }
+
+    &:hover {
+      background: var(--colour-focus);
+      box-shadow: 0px 2px 10px 0px var(--colour-black-light);
+    }
+    &:focus {
+      background: var(--colour-focus);
+      box-shadow: 0px 2px 10px 0px var(--colour-black-light);
+    }
+  }
   /* label {
     // font-size: 0.8rem;
   } */
 `;
+
+Contact.propTypes = {
+  pic: PropTypes.string.isRequired,
+};
 export default Contact;

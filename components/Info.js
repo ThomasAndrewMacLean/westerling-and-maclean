@@ -3,13 +3,14 @@ import T from './Translation';
 import styled from 'styled-components';
 import { CtaButton } from '../styles/button';
 import { scrollToContactForm } from '../utils';
+import PropTypes from 'prop-types';
 
-const Info = ({ pic, text, imageLeft, white }) => {
+const Info = ({ pic, text }) => {
   return (
-    <Section white={white} imageLeft={imageLeft}>
-      {pic && <Image loading="lazy" white={white} src={pic}></Image>}
+    <Section>
+      {pic && <Image src={pic}></Image>}
       {text && (
-        <Left white={white}>
+        <Left>
           <T id={text}></T>
 
           <CtaButton onClick={scrollToContactForm}>
@@ -23,13 +24,12 @@ const Info = ({ pic, text, imageLeft, white }) => {
 
 export const Section = styled.div`
   display: flex;
-  flex-direction: ${(props) => (props.imageLeft ? 'row' : 'row-reverse')};
+  flex-direction: row;
 
   background: white;
 
   @media (max-width: 850px) {
-    flex-direction: ${(props) =>
-      props.imageLeft ? 'column-reverse' : 'column-reverse'};
+    flex-direction: column-reverse;
   }
 `;
 
@@ -47,7 +47,6 @@ export const Image = styled.img`
 const Left = styled.div`
   width: 50%;
   padding: 3rem;
-  transform: translateX(${(props) => ` ${-15 * (4 * props.ratio - 4)}px`});
   transition: transform 250ms ease;
 
   display: flex;
@@ -69,5 +68,10 @@ const Left = styled.div`
     min-height: 100vh;
   }
 `;
+
+Info.propTypes = {
+  pic: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
+};
 
 export default Info;

@@ -47,8 +47,7 @@ const IndexPage = () => {
 
       <div className="snap">
         <Info
-          white
-          imageLeft
+      
           text="lorem"
           pic={getImageUrl(pics, 'info-image', true)}
         ></Info>

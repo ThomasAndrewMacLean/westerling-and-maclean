@@ -2,9 +2,9 @@ import React from 'react';
 import T from '../components/Translation';
 import styled from 'styled-components';
 import { getImageUrl } from '../utils';
+import PropTypes from 'prop-types';
 
-const Footer = ({ pics, insta }) => {
-  console.log(insta);
+const Footer = ({ pics }) => {
   return (
     <FooterSection>
       <div className="copy">
@@ -125,5 +125,7 @@ const FooterSection = styled.footer`
     }
   }
 `;
-
+Footer.propTypes = {
+  pics: PropTypes.array.isRequired,
+};
 export default Footer;

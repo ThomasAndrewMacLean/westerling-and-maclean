@@ -1,6 +1,7 @@
 import React from 'react';
 import T from '../components/Translation';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 const Quote = ({ quoteId }) => {
   return (
@@ -48,4 +49,7 @@ const QuoteSection = styled.div`
   }
 `;
 
+Quote.propTypes = {
+  quoteId: PropTypes.string.isRequired,
+};
 export default Quote;
