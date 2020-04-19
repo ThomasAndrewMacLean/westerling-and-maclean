@@ -3,10 +3,9 @@ import T from '../components/Translation';
 import styled from 'styled-components';
 import { CtaButton } from '../styles/button';
 const Contact = ({ pic }) => {
-  // Id has to be contact for scroll to after click on button
   return (
     <Section>
-      <ContactWrap id="contact">
+      <ContactWrap>
         <T id="contactTitle"></T>
         <ContactForm>
           <div className="wrap">

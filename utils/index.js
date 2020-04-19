@@ -11,5 +11,7 @@ export const getImageUrl = (context, id, full) => {
 export const scrollToContactForm = () => {
   document.querySelector('#contact').scrollIntoView({
     behavior: 'smooth',
+    block: 'start',
+    inline: 'nearest',
   });
 };

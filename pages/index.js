@@ -38,12 +38,14 @@ const IndexPage = () => {
           content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
         />
       </Head>
+
       <div className="snap hero">
         <Section white>
           <Hero pic={getImageUrl(pics, 'hero-image', true)}></Hero>
         </Section>
       </div>
-      <div className="snap plant">
+
+      <div className="snap">
         <Info
           white
           imageLeft
@@ -55,7 +57,7 @@ const IndexPage = () => {
       <div className="snap not-full-height">
         <Quote quoteId="quote1"></Quote>
       </div>
-      <div className="snap not-full-height">
+      <div id="contact" className="snap">
         <Contact pic={getImageUrl(pics, 'contact-image', true)}></Contact>
       </div>
 
@@ -103,10 +105,6 @@ const Main = styled.main`
         margin-bottom: 0;
       }
     }
-  }
-
-  .snap.plant {
-    scroll-padding-top: 1rem;
   }
 `;
 
