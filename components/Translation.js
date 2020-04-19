@@ -28,6 +28,7 @@ const Translation = ({ id }) => {
 const Span = styled.span`
   p {
     line-height: 1.8rem;
+    margin-bottom: 2rem;
   }
 `;
 Translation.propTypes = {

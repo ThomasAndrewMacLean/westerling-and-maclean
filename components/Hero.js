@@ -21,7 +21,12 @@ const HeroSection = styled.div`
   position: relative;
   padding-bottom: 3rem;
   @media (max-width: 850px) {
-    margin-bottom: 6rem;
+    margin-bottom: 1rem;
+    background: var(--gradient-top-bottom);
+    background-repeat: no-repeat;
+  }
+
+  @media (max-width: 500px) {
   }
 
   h1 {

@@ -50,9 +50,15 @@ const IndexPage = () => {
 
 const Main = styled.main`
   overflow: scroll;
+  width: 100vw;
+  overflow-x: hidden;
   height: 100vh;
   background: var(--colour-white);
-  padding: 0 15px;
+  padding: 0 1rem;
+
+  @media (max-width: 500px) {
+    padding: 0;
+  }
 
   scroll-snap-type: y proximity;
   .snap {
@@ -65,19 +71,21 @@ const Main = styled.main`
       min-height: auto !important;
     }
     &:first-child {
-      padding-top: 15px;
+      padding-top: 1rem;
+      @media (max-width: 500px) {
+        padding-top: 0;
+      }
     }
     &:last-child {
-      @media (min-width: 850px) {
-        /* height: calc(100vh - 15px); */
+      margin-bottom: 1rem;
+      @media (max-width: 500px) {
+        margin-bottom: 0;
       }
-
-      margin-bottom: 15px;
     }
   }
 
   .snap.plant {
-    scroll-padding-top: 15px;
+    scroll-padding-top: 1rem;
   }
 `;
 

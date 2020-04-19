@@ -13,7 +13,7 @@ export const CtaButton = styled.button`
   p {
     position: relative;
     line-height: inherit !important;
-
+    margin-bottom: inherit !important;
     z-index: 1;
 
     @media (max-width: 500px) {

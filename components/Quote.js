@@ -36,6 +36,16 @@ const QuoteSection = styled.div`
     margin-top: 1rem;
     /* font-family: 'Playfair Display', serif; */
   }
+
+  @media (max-width: 750px) {
+    blockquote {
+      line-height: 1.3rem;
+      font-size: 1rem;
+    }
+    span {
+      width: 75%;
+    }
+  }
 `;
 
 export default Quote;

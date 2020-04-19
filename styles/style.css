@@ -8,6 +8,24 @@
   --background-light: #f8e3c8;
   --background-light-opacity: #f8e3c8dd;
 
+  --gradient-top-bottom: linear-gradient(
+    180deg,
+    var(--background-light) 0%,
+    var(--colour-white) 80%
+  );
+
+  --gradient-left-bottom: linear-gradient(
+    55deg,
+    var(--background-light) 0%,
+    var(--colour-white) 50%
+  );
+
+  --gradient-right-top: linear-gradient(
+    235deg,
+    var(--background-light) 0%,
+    var(--colour-white) 50%
+  );
+
   --border: 3px solid black;
 }
 * {
