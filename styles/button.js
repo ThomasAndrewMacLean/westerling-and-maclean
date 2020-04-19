@@ -15,10 +15,6 @@ export const CtaButton = styled.button`
     line-height: inherit !important;
     margin-bottom: inherit !important;
     z-index: 1;
-
-    @media (max-width: 500px) {
-      font-size: 1.3rem;
-    }
   }
   &::after {
     content: '';

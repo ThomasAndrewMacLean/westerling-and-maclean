@@ -36,7 +36,11 @@ const HeroSection = styled.div`
     padding: 3rem;
     margin-bottom: 0;
     text-shadow: 0 0 10px var(--background-light);
+    @media (max-width: 630px) {
+      font-size: 12vw;
+    }
   }
+
   ${CtaButton} {
     font-size: 3rem;
     margin: 0 3rem;
