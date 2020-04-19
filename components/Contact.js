@@ -71,8 +71,8 @@ const ContactWrap = styled.div`
     /* max-width: 400px; */
     width: 100%;
     font-size: 1rem;
-    line-height: 1.5rem;
-    padding-left: 5px;
+    line-height: 2.5rem;
+    padding-left: 10px;
     font-weight: 300;
     border: none;
     box-shadow: 0px 2px 10px 0px #00000011;
