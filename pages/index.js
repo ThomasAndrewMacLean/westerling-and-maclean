@@ -65,7 +65,6 @@ const IndexPage = () => {
 
 const Main = styled.main`
   overflow: scroll;
-  -webkit-overflow-scrolling: touch;
   width: 100vw;
   overflow-x: hidden;
   height: 100vh;
