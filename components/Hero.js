@@ -13,7 +13,7 @@ const Hero = ({ pic }) => {
       <CtaButton onClick={scrollToContactForm}>
         <T id="cta"></T>
       </CtaButton>
-      <img src={pic} />
+      <img src={pic} alt="big lady walking, decorative" />
     </HeroSection>
   );
 };

@@ -54,8 +54,8 @@ const Logo = styled.span`
   background-size: cover;
   background-color: var(--colour-black-light);
   background-blend-mode: luminosity;
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   display: flex;
 
   &:hover {
