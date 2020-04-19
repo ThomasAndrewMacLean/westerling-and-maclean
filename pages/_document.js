@@ -23,7 +23,7 @@ export default class MyDocument extends Document {
 
   render() {
     return (
-      <html>
+      <html lang="en">
         <Head>
           <link rel="manifest" href={`${prefix}/manifest.json`} />
 
