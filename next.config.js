@@ -18,9 +18,9 @@ module.exports = withPWA({
   publicRuntimeConfig: {
     SENTRY: process.env.SENTRY,
   },
-  pwa: {
-    sw: 'westerling-and-maclean/sw.js',
-  },
+  // pwa: {
+  //   sw: 'westerling-and-maclean/sw.js',
+  // },
   assetPrefix: prefix,
   exportTrailingSlash: true,
   exportPathMap: function () {
