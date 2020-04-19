@@ -8,7 +8,7 @@ import PropTypes from 'prop-types';
 const Info = ({ pic, text }) => {
   return (
     <Section>
-      {pic && <Image src={pic}></Image>}
+      {pic && <Image src={pic} alt="picture of boy in hoody"></Image>}
       {text && (
         <Left>
           <T id={text}></T>
