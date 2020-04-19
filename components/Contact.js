@@ -52,7 +52,7 @@ const Section = styled.div`
   align-items: center;
   flex-direction: row;
   background: var(--gradient-bottom-top);
-
+  min-height: 100vh;
   img {
     width: 50%;
   }
