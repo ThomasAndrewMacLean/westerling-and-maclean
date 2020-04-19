@@ -111,6 +111,10 @@ const FooterSection = styled.footer`
     justify-content: flex-end;
     grid-area: socialmedia;
 
+    a {
+      display: flex;
+      align-items: baseline;
+    }
     @media (max-width: 500px) {
       ul {
         display: flex;
