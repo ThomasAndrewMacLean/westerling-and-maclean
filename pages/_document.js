@@ -1,6 +1,6 @@
 import React from 'react';
 import Document, { Head, Main, NextScript } from 'next/document';
-import { prefix } from '../next.config';
+import { prefix } from '../utils';
 // Import styled components ServerStyleSheet
 import { ServerStyleSheet } from 'styled-components';
 

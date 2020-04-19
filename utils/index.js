@@ -15,3 +15,6 @@ export const scrollToContactForm = () => {
     inline: 'nearest',
   });
 };
+
+const isProduction = process.env.NODE_ENV === 'production';
+export const prefix = isProduction ? '/westerling-and-maclean' : '';

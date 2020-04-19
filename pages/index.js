@@ -4,11 +4,7 @@ import styled from 'styled-components';
 
 import { PictureContext } from '../pages/_app';
 import { getImageUrl } from '../utils';
-import Info from '../components/Info';
-import Quote from '../components/Quote';
-import Hero from '../components/Hero';
-import Footer from '../components/Footer';
-import Contact from '../components/Contact';
+import { Info, Quote, Hero, Footer, Contact } from '../components';
 
 const IndexPage = () => {
   const pics = useContext(PictureContext);
