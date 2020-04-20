@@ -98,8 +98,10 @@ const Section = styled.div`
 const ContactWrap = styled.div`
   position: relative;
   padding: 3rem;
-  width: 100%;
-
+  width: 50%;
+  @media (max-width: 850px) {
+    width: 100%;
+  }
   .input {
     /* max-width: 400px; */
     width: 100%;
