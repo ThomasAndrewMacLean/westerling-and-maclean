@@ -21,3 +21,4 @@ https://developers.caffeina.com/how-to-get-a-100-lighthouse-score-with-nextjs-c2
 
 
 https://developer.mozilla.org/en-US/docs/Web/CSS/clamp
+https://www.remove.bg/
