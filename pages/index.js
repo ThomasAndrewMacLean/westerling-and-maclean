@@ -47,7 +47,7 @@ const IndexPage = () => {
       </div>
       <div id="contact" className="snap">
         <Contact
-          headPic={getImageUrl(pics, 'hoofd', true)}
+         
           pic={getImageUrl(pics, 'flower4', true)}
         ></Contact>
       </div>

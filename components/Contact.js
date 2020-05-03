@@ -5,7 +5,7 @@ import { CtaButton } from '../styles/button';
 import PropTypes from 'prop-types';
 import { formUrl } from '../constants';
 
-const Contact = ({ pic, headPic }) => {
+const Contact = ({ pic }) => {
   const [sent, setSent] = useState(false);
   const postForm = (e) => {
     e.preventDefault();
@@ -31,7 +31,7 @@ const Contact = ({ pic, headPic }) => {
         {sent ? (
           <ContactSent>
             <T id="contactBedankt"></T>
-            <img src={headPic} alt="head image"></img>
+
             <CtaButton onClick={() => setSent(false)}>
               <T id="contactNieuw"></T>
             </CtaButton>
@@ -188,7 +188,6 @@ const ContactSent = styled.div`
 
 Contact.propTypes = {
   pic: PropTypes.string.isRequired,
-  headPic: PropTypes.string.isRequired,
 };
 
 export default Contact;
