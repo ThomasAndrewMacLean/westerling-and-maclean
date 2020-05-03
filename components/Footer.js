@@ -118,10 +118,12 @@ const FooterSection = styled.footer`
 
   .Annouk {
     grid-area: Annouk;
+    padding-left: 1rem;
   }
 
   .Thomas {
     grid-area: Thomas;
+    padding-left: 1rem;
   }
 
   .socialmedia {
@@ -129,7 +131,12 @@ const FooterSection = styled.footer`
     display: flex;
     justify-content: flex-end;
     grid-area: socialmedia;
-
+    ul {
+      flex-direction: column;
+    }
+    li {
+      /* max-width: 170px; */
+    }
     a {
       display: flex;
       align-items: center;
@@ -157,8 +164,8 @@ const FooterSection = styled.footer`
     }
   }
 
-  @media (max-width: 500px) {
-    grid-template-rows: 1fr 1fr 1fr 0.5fr;
+  @media (max-width: 400px) {
+    grid-template-rows: 1fr 0fr 0fr 0.5fr;
     grid-template-areas: 'socialmedia socialmedia socialmedia' 'Annouk Annouk Annouk' 'Thomas Thomas Thomas' 'copy copy copy';
 
     .socialmedia {

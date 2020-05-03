@@ -72,25 +72,34 @@ const Contact = ({ pic }) => {
           </div>
         </ContactForm>
       </ContactWrap>
-
-      <img loading="lazy" src={pic} alt="background image with plants" />
+      <ImageWrap>
+        <img loading="lazy" src={pic} alt="background image with plants" />
+      </ImageWrap>
     </Section>
   );
 };
 
+const ImageWrap = styled.div`
+  img {
+    width: 100%;
+    height: 100%;
+  }
+`;
 const Section = styled.div`
   display: flex;
   align-items: center;
   flex-direction: row;
   background: var(--gradient-bottom-top);
   min-height: 100vh;
-  img {
+  ${ImageWrap} {
     width: 50%;
   }
   @media (max-width: 850px) {
     flex-direction: column;
-    img {
+    ${ImageWrap} {
+      /* display: none; */
       width: 100%;
+      /* max-height: 50vh; */
     }
   }
 `;

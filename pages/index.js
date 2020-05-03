@@ -32,29 +32,26 @@ const IndexPage = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
 
-      <div className="snap hero">
+      <section className="snap hero">
         <Section white>
           <Hero pic={getImageUrl(pics, 'hero-image', true)}></Hero>
         </Section>
-      </div>
+      </section>
 
-      <div className="snap">
+      <section className="snap">
         <Info text="info" pic={getImageUrl(pics, 'info-image', true)}></Info>
-      </div>
+      </section>
 
-      <div className="snap not-full-height">
+      <section className="snap not-full-height">
         <Quote quoteId="quote1"></Quote>
-      </div>
-      <div id="contact" className="snap">
-        <Contact
-         
-          pic={getImageUrl(pics, 'contact-image', true)}
-        ></Contact>
-      </div>
+      </section>
+      <section id="contact" className="snap">
+        <Contact pic={getImageUrl(pics, 'contact-image', true)}></Contact>
+      </section>
 
-      <div className="snap not-full-height">
+      <section className="snap not-full-height">
         <Footer pics={pics}></Footer>
-      </div>
+      </section>
     </Main>
   );
 };
