@@ -36,6 +36,8 @@ const HeroSection = styled.div`
     padding: 3rem;
     margin-bottom: 0;
     text-shadow: 0 0 10px var(--background-light);
+    z-index: 1;
+    position: relative;
     @media (max-width: 630px) {
       font-size: 12vw;
     }
@@ -49,21 +51,26 @@ const HeroSection = styled.div`
   img {
     position: absolute;
     top: -50px;
-
-    right: 1%;
+    z-index: 0;
+    right: 0%;
     height: 100vh;
     transform: rotateY(180deg);
 
+    @media (max-width: 1200px) {
+      right: -10%;
+    }
+
     @media (max-width: 1000px) {
-      right: -25%;
+      right: -35%;
     }
     @media (max-width: 850px) {
-      right: -5%;
+      right: -25%;
       height: 120%;
       top: 0;
     }
 
     @media (max-width: 630px) {
+      right: 0;
       position: relative;
       width: 100%;
       top: 0;

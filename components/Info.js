@@ -42,8 +42,8 @@ export const Section = styled.div`
 export const Image = styled.img`
   width: 50%;
   height: auto;
-  object-fit: cover;
-  padding: 3rem;
+  object-fit: contain;
+  padding: 3rem 0;
   @media (max-width: 850px) {
     width: 100%;
     margin-top: -6rem;
