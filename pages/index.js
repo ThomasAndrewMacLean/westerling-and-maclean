@@ -34,12 +34,12 @@ const IndexPage = () => {
 
       <div className="snap hero">
         <Section white>
-          <Hero pic={getImageUrl(pics, 'flower1', true)}></Hero>
+          <Hero pic={getImageUrl(pics, 'hero-image', true)}></Hero>
         </Section>
       </div>
 
       <div className="snap">
-        <Info text="info" pic={getImageUrl(pics, 'flower3', true)}></Info>
+        <Info text="info" pic={getImageUrl(pics, 'info-image', true)}></Info>
       </div>
 
       <div className="snap not-full-height">
@@ -48,7 +48,7 @@ const IndexPage = () => {
       <div id="contact" className="snap">
         <Contact
          
-          pic={getImageUrl(pics, 'flower4', true)}
+          pic={getImageUrl(pics, 'contact-image', true)}
         ></Contact>
       </div>
 
